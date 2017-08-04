@@ -1,0 +1,30 @@
+extends template/layout
+
+block scripts
+	title #{title} | X-Medium
+	
+block content
+	h2.text-center Register New Account
+	hr
+	form(method="POST", action="/user/register").col-sm-4.col-sm-offset-4
+		#form-group
+			label Full Name :
+			input.form-control(name="name", type="text", required)
+		br
+		#form-group
+			label Username :
+			input.form-control(name="username", type="text", required)
+		br
+		#form-group
+			label Email :
+			input.form-control(name="email", type="email", required)
+		br
+		#form-group
+			label Password :
+			input.form-control(name="password", type="password", required)
+		br
+		#form-group
+			label Re-type your password :
+			input.form-control(name="password2", type="password", required)
+		br
+		input.btn.btn-success.btn-lg.btn-block(type="submit", value="Register Now!")

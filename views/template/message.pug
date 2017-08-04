@@ -1,0 +1,6 @@
+.messages
+	each type in Object.keys(messages)
+		each message in messages[type]
+			.row
+				div.col-sm-6.col-sm-offset-3
+					div(class="alert text-center alert-"+type role='alert') #{message}

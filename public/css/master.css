@@ -1,0 +1,27 @@
+nav{
+	/*background-color: #FF3F80;*/
+	background-color: #222;
+}
+nav a{
+	text-decoration: none;
+	color: rgb(249, 240, 22);
+}
+ul > p{
+	color: white;
+}
+.alert-error{
+	color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+footer{
+	position:fixed;
+	left:0px;
+	bottom:0px;
+	height:25px;
+	line-height:25px;
+	width:100%;
+	background:#222;
+	color: white;
+	font-size: 14px;
+}

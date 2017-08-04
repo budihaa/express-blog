@@ -1,0 +1,21 @@
+extends template/layout
+
+block scripts
+	title #{article.title} | X-Medium
+
+block content
+	.row
+		.col-sm-8.col-sm-offset-2
+			h1= article.title
+			h5 Written by #{author}
+			hr
+			p.text-justify= article.body
+			hr
+	
+	if (user)
+		if (article.author == user._id)
+			.row
+				.col-sm-4.col-sm-offset-2
+					a(href="/article/edit/" + article._id).btn.btn-warning.btn-lg.btn-block Edit
+				.col-sm-4
+					a(href="#", data-id=article._id).btn.btn-danger.btn-lg.btn-block.delete-article Delete

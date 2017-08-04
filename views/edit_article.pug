@@ -1,0 +1,18 @@
+extends template/layout
+
+block scripts
+	title= title
+	
+block content
+	h1.text-center Edit Story: #{article.title}
+	.col-sm-8.col-sm-offset-2
+		form(method="POST", action="/article/edit/" + article.id)
+			#form-group
+				label Title :
+				input.form-control(name="title", type="text", placeholder="Title of your story", value=article.title)
+			br
+			#form-group
+				label Body :
+				textarea.form-control(rows="10" name="body", placeholder="Write your story here...") #{article.body}
+			br
+			input.btn.btn-success.btn-lg.btn-block(type="submit", value="Submit Your Story!")

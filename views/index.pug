@@ -1,0 +1,19 @@
+extends template/layout
+
+block scripts
+	title= title
+
+block content
+	.row
+		.col-sm-10.col-sm-offset-1
+			h1 Our Stories...
+			ul.list-group
+				each article, i in articles
+					li.list-group-item 
+						a(href="/article/" + article.id)= article.title
+	
+	
+
+	
+
+	

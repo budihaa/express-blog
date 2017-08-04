@@ -1,0 +1,18 @@
+extends template/layout
+
+block scripts
+	title #{title} | X-Medium
+	
+block content
+	h2.text-center Login
+	hr
+	form(method="POST", action="/user/login").col-sm-4.col-sm-offset-4
+		#form-group
+			label Username :
+			input.form-control(name="username", type="text", required)
+		br
+		#form-group
+			label Password :
+			input.form-control(name="password", type="password", required)
+		br
+		input.btn.btn-success.btn-lg.btn-block(type="submit", value="Login")

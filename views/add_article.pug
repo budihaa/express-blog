@@ -1,0 +1,18 @@
+extends template/layout
+
+block scripts
+	title= title
+	
+block content
+	h1.text-center Tell Everyone About Your Story!
+	hr
+	form(method="POST", action="/article/add").col-sm-8.col-sm-offset-2
+		#form-group
+			label Title :
+			input.form-control(name="title", type="text", placeholder="Title of your story")
+		br
+		#form-group
+			label Body :
+			textarea.form-control(name="body", placeholder="Write your amazing story here..." rows="10")
+		br
+		input.btn.btn-success.btn-lg.btn-block(type="submit", value="Submit Your Story!")
